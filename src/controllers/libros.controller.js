@@ -21,6 +21,8 @@ const getLibro = (req,res)=>{
             respuesta.error = false;
             respuesta.codigo = result.length==0? 204 : 201;
             respuesta.result = result;
+            respuesta.params = params;
+            respuesta.sql = sql;
             res.send(respuesta)
         }
     })
